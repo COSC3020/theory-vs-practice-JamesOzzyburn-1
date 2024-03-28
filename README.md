@@ -27,6 +27,6 @@ $2)$ I think it would take about 6.5 seconds to do a search over 10,000 elements
 
 $3a)$ It could be that the OS or other programs could have been doing alot of stuff in the background in the second run making the code have to share or wait on resources.
 
-$3b)$ It could be that the data I was inputting wasnt the "optimal" data the comparison algorithm was looking for. Such as the tree holds ints but I was inputting a int cast as a string or something so it was having to convert it back to be able to check it.
+$3b)$ It could be that the data that was comparing was different, in the first run through we were comparing ints and in the second we were comparing strings which brings more overhead.
 
-$3c)$ The algorithm could have gotten lucky and found the element really quickly in the 1,000 element tree at position 500. However in the 10,000 element tree it had to traverse alot more elements or even all of the elements until it found it. It could also be the case that our search implementation could also be doing other things in it in addition to searching which gave it a runtime that is actually not $\Theta(log n)$
+$3c)$ It could have been that when you were running the first tree the program was all able to be stored in ram. However when you ran the seconds tree it had to swap to disc slowing it down.
